@@ -127,11 +127,11 @@ src/
 
 ### Real-Time Detection
 
-The bot listens for `Events.UserUpdate` which fires when Discord detects a user property change (including `primary_guild`). This is triggered by the `GUILD_MEMBER_UPDATE` Gateway event. The bot compares old and new `primaryGuild` values and syncs the role only when the tag actually changes.
+The bot listens for `Events.UserUpdate`, which fires when Discord detects a user property change (including `primary_guild`). This is triggered by the `GUILD_MEMBER_UPDATE` Gateway event. The bot compares old and new `primaryGuild` values and syncs the role only when the tag actually changes.
 
 ### Caching
 
-User API responses are cached for 5 minutes to avoid redundant REST calls during rapid successive checks. Cache is invalidated when a tag change is detected.
+User API responses are cached for 5 minutes to avoid redundant REST calls during rapid successive checks. The cache is invalidated when a tag change is detected.
 
 ### Rate Limit Handling
 
